@@ -33,12 +33,17 @@
               </div>
               <!-- Navbar Right Side -->
               <div class="navbar-nav">
-                <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-                <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
-                <form id="logout-form" method="post" action="{% url 'logout' %}">
-                  <a class="nav-item nav-link" onclick="document.getElementById('logout-form').submit(); return false;">Sign out</a>
+                {% if user.is_authenticated %}
+                  <form id="logout-form" method="post" action="{% url 'logout' %}">
+                  <a class="nav-item nav-link" href='#' onclick="document.getElementById('logout-form').submit(); return false;">Sign out</a>
                   {% csrf_token %}
-                </form>
+
+                  <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+                  </form>
+                {% else %}
+                  <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                  <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+                {% endif %}
               </div>
             </div>
           </div>
