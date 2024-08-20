@@ -82,3 +82,8 @@ body {
   .account-heading {
     font-size: 2.5rem;
   }
+
+  .custom-red-button {
+    background-color: #ff0000; /* Red background */
+    border-color: #ff0000; /* Red border */
+}
