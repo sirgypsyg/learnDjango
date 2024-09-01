@@ -7,22 +7,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse_lazy
 
 
-
-posts = [ 
-    {
-        'author': 'Gypsy',
-        'title': 'Blog Post 1',
-        'content': 'First post content',
-        'date_posted': 'September 11, 2031'
-    },    
-    {
-        'author': 'maciek',
-        'title': 'Blog Post 2',
-        'content': 'second post content',
-        'date_posted': 'Janurary 44, 1121'
-    }
-]
- 
 def home(request): 
     context = {
         'posts': Post.objects.all()
