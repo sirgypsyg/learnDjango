@@ -15,6 +15,7 @@ def home(request):
     }
     return render(request, 'blog/home.html', context)
 
+
 class PostListView(ListView):
     model = Post
     template_name = 'blog/home.html'
@@ -24,7 +25,7 @@ class PostListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['latest_post'] = Post.objects.latest('date_posted')
+        context['latest_post'] = Post.objects.latest('date_posted')  # Fetch the latest post
         return context
 
 class UserPostListView(ListView):
