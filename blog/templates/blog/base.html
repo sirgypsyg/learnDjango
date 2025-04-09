@@ -65,8 +65,15 @@
             <div class="content-section">
               <h3>Our Sidebar</h3>
               <p class='text-muted'>You can put any information here you'd like.
-                <ul class="list-group">
-                  <li class="list-group-item list-group-item-light">Latest Posts</li>
+                <li class="list-group-item list-group-item-light">
+                  <strong>Latest Post:</strong>
+                  {% if latest_post %}
+                    <a href="{% url 'post-detail' latest_post.pk %}">{{ latest_post.title }}</a>
+                    <small class="text-muted">by {{ latest_post.author }} on {{ latest_post.date_posted|date:"F d, Y" }}</small>
+                  {% else %}
+                    No posts available.
+                  {% endif %}
+                </li>
                   <li class="list-group-item list-group-item-light">Announcements</li>
                   <li class="list-group-item list-group-item-light">Calendars</li>
                   <li class="list-group-item list-group-item-light">etc</li>

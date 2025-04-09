@@ -11,7 +11,7 @@ from django.contrib.auth import logout
 
 def home(request): 
     context = {
-        'posts': Post.objects.all()
+        'posts': Post.objects.all(),
     }
     return render(request, 'blog/home.html', context)
 
@@ -21,6 +21,11 @@ class PostListView(ListView):
     context_object_name = 'posts'
     ordering = ['-date_posted']
     paginate_by = 5
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['latest_post'] = Post.objects.latest('date_posted')
+        return context
 
 class UserPostListView(ListView):
     model = Post
