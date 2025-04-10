@@ -1,89 +1,77 @@
+/* General Body Styling */
 body {
-    background: #fafafa;
-    color: #333333;
+    background: #F5F5F5; /* Light gray for a clean background */
+    color: #333333; /* Dark gray for text */
     margin-top: 5rem;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    color: #444444;
-  }
-  
-  ul {
-    margin: 0;
-  }
-  
-  .bg-steel {
-    background-color: #5f788a;
-  }
-  
-  .site-header .navbar-nav .nav-link {
-    color: #cbd5db;
-  }
-  
-  .site-header .navbar-nav .nav-link:hover {
-    color: #ffffff;
-  }
-  
-  .site-header .navbar-nav .nav-link.active {
-    font-weight: 500;
-  }
-  
-  .content-section {
-    background: #ffffff;
+}
+/* Profile Image */
+.account-img {
+  height: 140px; /* Set a fixed height */
+  width: 140;  /* Set a fixed width */
+  object-fit: cover; /* Ensures the image fits within the dimensions */
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+/* Article Image */
+.article-img {
+  height: 65px; /* Set a smaller height for article images */
+  width: 65px;  /* Set a smaller width for article images */
+  object-fit: cover; /* Ensures the image fits within the dimensions */
+  margin-right: 16px;
+  border-radius: 50%; /* Keeps the rounded-circle effect */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #333333; /* Dark gray for headings */
+}
+
+/* Navbar */
+.bg-steel {
+    background-color: #5C80BC; /* Muted blue for the navbar */
+}
+
+.site-header .navbar-nav .nav-link {
+    color: #FFFFFF; /* White for navbar links */
+}
+
+.site-header .navbar-nav .nav-link:hover {
+    color: #A3C4F3; /* Lighter blue for hover effect */
+}
+
+/* Content Section */
+.content-section {
+    background: #FFFFFF; /* White for content background */
     padding: 10px 20px;
-    border: 1px solid #dddddd;
+    border: 1px solid #EAEAEA; /* Light gray border */
     border-radius: 3px;
     margin-bottom: 20px;
-  }
-  
-  .article-title {
-    color: #444444;
-  }
-  
-  a.article-title:hover {
-    color: #428bca;
-    text-decoration: none;
-  }
-  
-  .article-content {
-    white-space: pre-line;
-  }
-  
-  .article-img {
-    height: 65px;
-    width: 65px;
-    margin-right: 16px;
-  }
-  
-  .article-metadata {
-    padding-bottom: 1px;
-    margin-bottom: 4px;
-    border-bottom: 1px solid #e3e3e3
-  }
-  
-  .article-metadata a:hover {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .article-svg {
-    width: 25px;
-    height: 25px;
-    vertical-align: middle;
-  }
-  
-  .account-img {
-    height: 125px;
-    width: 125px;
-    margin-right: 20px;
-    margin-bottom: 16px;
-  }
-  
-  .account-heading {
-    font-size: 2.5rem;
-  }
+}
 
-  .custom-red-button {
-    background-color: #ff0000; /* Red background */
-    border-color: #ff0000; /* Red border */
+/* Article Titles */
+.article-title {
+    color: #4F4F4F; /* Slightly lighter gray for titles */
+}
+
+a.article-title:hover {
+    color: #5C80BC; /* Muted blue for hover effect */
+    text-decoration: none;
+}
+
+/* Buttons */
+.btn-outline-info {
+    color: #5C80BC; /* Muted blue for buttons */
+    border-color: #5C80BC;
+}
+
+.btn-outline-info:hover {
+    background-color: #5C80BC;
+    color: #FFFFFF; /* White text on hover */
+}
+
+/* Custom Red Button */
+.custom-red-button {
+    background-color: #A8C686; /* Muted green for a softer look */
+    border-color: #A8C686;
 }

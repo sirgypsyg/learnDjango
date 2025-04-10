@@ -1,6 +1,62 @@
-{% extends "blog/base.html"  %}
+{% extends "blog/base.html" %}
 {% block content %}
-    <h1>About Page</h1>
+    <div class="content-section">
+        <h1>About LearnDjango</h1>
+        <p>
+            LearnDjango is a web application designed to help users create and manage blog posts efficiently. 
+            Built using the Django framework, it provides a robust and scalable platform for blogging enthusiasts.
+        </p>
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#core-technologies">Core Technologies</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#setup">Setup</a></li>
+            <li><a href="#contributing">Contributing</a></li>
+        </ul>
+
+        <h2 id="overview">Overview</h2>
+        <p>
+            LearnDjango is a blogging platform that allows users to register, log in, and create posts. 
+            It also includes features like user profiles, password management, and pagination for browsing posts.
+        </p>
+
+        <h2 id="core-technologies">Core Technologies</h2>
+        <ul>
+            <li>Python 3.10</li>
+            <li>Django 4.2</li>
+            <li>Bootstrap 4</li>
+            <li>SQLite (default database)</li>
+        </ul>
+
+        <h2 id="features">Features</h2>
+        <ul>
+            <li>User authentication (registration, login, logout)</li>
+            <li>Profile management with profile pictures</li>
+            <li>CRUD operations for blog posts</li>
+            <li>Pagination for posts</li>
+            <li>Responsive design using Bootstrap</li>
+        </ul>
+
+        <h2 id="setup">Setup</h2>
+        <p>To set up the project locally, follow these steps:</p>
+        <ol>
+            <li>Clone the repository: <code>git clone https://github.com/your-repo/learnDjango.git</code></li>
+            <li>Navigate to the project directory: <code>cd learnDjango</code></li>
+            <li>Create a virtual environment: <code>python3 -m venv venv</code></li>
+            <li>Activate the virtual environment:
+                <ul>
+                    <li>On macOS/Linux: <code>source venv/bin/activate</code></li>
+                    <li>On Windows: <code>venv\Scripts\activate</code></li>
+                </ul>
+            </li>
+            <li>Install dependencies: <code>pip install -r requirements.txt</code></li>
+            <li>Run the development server: <code>python manage.py runserver</code></li>
+        </ol>
+
+        <h2 id="contributing">Contributing</h2>
+        <p>
+            Contributions are welcome! If you'd like to contribute, please fork the repository and submit a pull request.
+        </p>
+    </div>
 {% endblock content %}
-
-
